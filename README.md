@@ -1,6 +1,6 @@
 # VNOJ Docker
 
-This repository contains the Docker files to run the [VNOJ](https://github.com/VNOI-Admin/OJ).
+This repository contains the Docker files to run the [VNOJ](https://github.com/t-rekttt/OJ).
 
 Based on [dmoj-docker](https://github.com/Ninjaclasher/dmoj-docker).
 
@@ -11,7 +11,7 @@ First, [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docke
 Clone the repository:
 
 ```sh
-$ git clone --recursive https://github.com/VNOI-Admin/vnoj-docker.git
+$ git clone --recursive https://github.com/t-rekttt/vnoj-docker.git
 $ cd vnoj-docker/dmoj
 ```
 
