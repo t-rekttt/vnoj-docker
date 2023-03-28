@@ -122,7 +122,7 @@ If the static files are modified, read the section on [Managing Static Files](#m
 If only the source code is modified, a restart is sufficient:
 
 ```sh
-$ docker compose restart site celery bridged wsevent
+$ docker compose restart
 ```
 
 ### Multiple Nginx Instances
