@@ -79,7 +79,7 @@ STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
 # your email settings.
 
 # Use this if you are just testing.
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # The following block is included for your convenience, if you want
 # to use Gmail.
@@ -108,7 +108,7 @@ STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
 ADMINS = ()
 
 # The sender for the aforementioned emails.
-SERVER_EMAIL = 'VNOJ: VNOI Online Judge <vnoj@vnoi.info>'
+SERVER_EMAIL = 'TASOJ: TLU AlgoSec Online Judge <oj@tlualgosec.com>'
 
 
 ################################################
@@ -135,10 +135,10 @@ DMOJ_RESOURCES = '/assets/resources/'
 ############################################
 
 ## DMOJ site display settings.
-SITE_NAME = 'VNOJ'
-SITE_FULL_URL = os.environ.get('SITE_FULL_URL', 'http://localhost/')
-SITE_LONG_NAME = 'VNOJ: VNOI Online Judge'
-SITE_ADMIN_EMAIL = 'leduythuc@vnoi.info'
+SITE_NAME = 'TASOJ'
+SITE_FULL_URL = os.environ.get('SITE_FULL_URL', 'http://oj.tlualgosec.com/')
+SITE_LONG_NAME = 'TASOJ: TLU AlgoSec Online Judge'
+SITE_ADMIN_EMAIL = 'oj@tlualgosec.com'
 TERMS_OF_SERVICE_URL = None
 
 ## Media files settings.
