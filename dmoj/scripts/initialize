@@ -3,6 +3,7 @@ cd $(dirname $(dirname $0)) || exit
 
 mkdir -p problems media
 
+git submodule update --init --recursive
 cp config/config.js repo/websocket/
 cp config/local_settings.py repo/dmoj/
 cp config/uwsgi.ini repo/
