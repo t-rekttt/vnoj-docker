@@ -3,7 +3,7 @@ cd $(dirname $(dirname $0)) || exit
 
 mkdir -p problems media
 
-git submodule foreach git pull origin master
+git submodule foreach 'git pull --ff-only --commit origin master'
 cp config/config.js repo/websocket/
 cp config/local_settings.py repo/dmoj/
 cp config/uwsgi.ini repo/
