@@ -9,11 +9,16 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
+   
+    - name: Initialize
+      working-directory: ./dmoj
+      run: ./scripts/initialize
+      
     - name: Build the Docker image
       working-directory: ./dmoj
       run: sudo docker compose build
