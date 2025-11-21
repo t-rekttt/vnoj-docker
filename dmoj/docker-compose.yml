@@ -126,6 +126,26 @@ services:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks: [nginx]
     depends_on: [site, wsevent]
+  s3-sync:
+    image: d3fk/s3cmd:latest
+    container_name: s3-sync
+    entrypoint: []
+    command:
+      - "/bin/sh"
+      - "-c"
+      - |
+        while sleep 10; do
+          s3cmd sync /mnt/problems/ s3://${AWS_S3_BUCKET}/tests/ \
+            --access_key=${AWS_ACCESS_KEY_ID} \
+            --secret_key=${AWS_SECRET_ACCESS_KEY} \
+            --host=${AWS_S3_HOST} \
+            --host-bucket="%(bucket)s.${AWS_S3_HOST}" \
+            -d
+        done
+  
+    volumes:
+      - ./problems/:/mnt/problems/
+    restart: always
 networks:
   site:
   db:
